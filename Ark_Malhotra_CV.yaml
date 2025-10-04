@@ -6,7 +6,7 @@ cv:
   website: https://sqrtnegativone.github.io/
   social_networks:
     - network: LinkedIn
-      username: ark-malhotra-431938323
+      username: ark-malhotra
     - network: GitHub
       username: SqrtNegativOne
 
@@ -24,17 +24,17 @@ cv:
           - 'CGPA: 8.6'
 
     experience:
-      - company: GDSC Society
-        position: ML Department Mentor
+      - company: Google Developer Student Club NSUT
+        position: ML Member, ML Department Mentor
         date:
         start_date: 2024-11
         end_date: present
         location: ''
         summary:
         highlights:
-          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the [Zero Day Apocalypse](https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448) competition under the society's flagship event.
-          - Created an open [Kaggle competition](https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml) witnessing participation from 230 entrants 
-      - company: TDS Society
+          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore) (character level text generator using PyTorch), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the [Zero Day Apocalypse](https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448) competition under the society's flagship event.
+          - Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after [coding a dataset](https://github.com/SqrtNegativOne/competition-dataset-generation) for the [Kaggle competition](https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview) witnessing participation from 200+ teams from 4 countries, and conducting interviews.
+      - company: Team Debugging Society
         position: ML Engineer
         date:
         start_date: 2024-10
@@ -42,16 +42,16 @@ cv:
         location: ''
         summary:
         highlights:
-          - Organised and helped judge an inter-college data science competition with 50+ participants.
+          - Organised and helped judge an [inter-college data science competition](https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127) with 50+ participants.
       - company: Axiom (The Philosophy Society)
-        position: Executive Committee Member
+        position: Content Writer and Research, Executive Committee Member
         date:
         start_date: 2024-10
         end_date: present
         location: ''
         summary:
         highlights:
-          - Helped organise six society events in Oblivion'25.
+          - Managed recruitment for 145 applicants, selecting 30 members for the society after reviewing responses, conducting interviews, and coordinating with the team.
 
     projects:
       - name: '[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation](https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf)'
@@ -63,9 +63,7 @@ cv:
         highlights:
           - Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
           - Selected as one of the top 90 teams from over 200 teams in the college.
-          - Implemented a FastAPI backend to handle user queries and manage interactions with the AI model that integrates with the frontend.
-          - Integrated multiple real-time oceanographic data sources from multiple ARGO missions into a unified pipeline with caching for efficient retrieval by the AI agent.
-          - Used PydanticAI and tooling to ensure data validation and consistency across the data pipeline.
+          - Implemented a FastAPI backend to connect a PydanticAI agent with data sources from multiple ARGO missions.
       - name: '[Modular AI Factchecking Pipeline](https://github.com/SqrtNegativOne/AI-factcheck)'
         date:
         start_date: 2025-06
@@ -73,7 +71,7 @@ cv:
         location:
         summary: Python backend for an AI factchecking app.
         highlights:
-          - Statically typed, class-local imports and cache for speed improvements.
+          - Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.
       - name: '[Personal Website](https://github.com/SqrtNegativOne/sqrtnegativone.github.io)'
         date:
         start_date: 2024-10
@@ -81,7 +79,8 @@ cv:
         location:
         summary: Portfolio website and blog
         highlights:
-          - Built using raw HTML CSS and Javascript, and Eleventy for blog.
+          - Built using raw HTML CSS and Javascript, and Eleventy framework for blogging.
+          - Implements responsive-design, a markdown engine, and an RSS feed.
       - name: '[Hand Cricket Multi-Agent Bandit model](https://github.com/SqrtNegativOne/hand-cricket-MAB)'
         date:
         start_date: 2025-06
@@ -89,26 +88,24 @@ cv:
         location:
         summary: Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.
         highlights:
-          - Statically typed game-theory-inspired agent to win at the old game of Hand cricket by detecting patterns in user's moves.
+          - Statically typed game-theory-inspired agent to win at the old game of Hand cricket by analyzing common patterns in user's moves.
 
     skills:
       - label: Languages
         details: 'C++, C, C#, Javascript, Typescript, Python'
       - label: Technologies
-        details: 'HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git'
+        details: 'HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, Docker, Matplotlib'
       - label: Core Concepts
         details: 'Machine Learning, Artificial Intelligence, Backend, Object Oriented Programming'
-      - label: Societies
-        details: Team Debugging Society (ML Engineer), Google Developer Student Club (ML Engineer), D'Code (DSA Specialist), Axiom the Philosophy Society (Content and newsletter writer)
 
 design:
   theme: engineeringclassic
   page:
     size: a4
-    top_margin: 2cm
-    bottom_margin: 2cm
-    left_margin: 2cm
-    right_margin: 2cm
+    top_margin: 1cm
+    bottom_margin: 1cm
+    left_margin: 1cm
+    right_margin: 1cm
     show_page_numbering: false
     show_last_updated_date: false
   colors:

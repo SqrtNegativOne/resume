@@ -50,10 +50,10 @@
 #let design-entries-allow-page-break-in-entries = true
 #let design-entries-horizontal-space-between-columns = 0.1cm
 #let design-entries-left-and-right-margin = 0.2cm
-#let design-page-top-margin = 2cm
-#let design-page-bottom-margin = 2cm
-#let design-page-left-margin = 2cm
-#let design-page-right-margin = 2cm
+#let design-page-top-margin = 1cm
+#let design-page-bottom-margin = 1cm
+#let design-page-left-margin = 1cm
+#let design-page-right-margin = 1cm
 #let design-page-show-last-updated-date = false
 #let design-page-show-page-numbering = false
 #let design-links-underline = false
@@ -455,7 +455,7 @@
   [#box(original-link("mailto:ark.malhotra.ug24@nsut.ac.in")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)ark.malhotra.ug24\@nsut.ac.in])],
   [#box(original-link("tel:+91-83688-13202")[#fa-icon("phone", size: 0.9em) #h(0.05cm)083688 13202])],
   [#box(original-link("https://sqrtnegativone.github.io/")[#fa-icon("link", size: 0.9em) #h(0.05cm)sqrtnegativone.github.io])],
-  [#box(original-link("https://linkedin.com/in/ark-malhotra-431938323")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra-431938323])],
+  [#box(original-link("https://linkedin.com/in/ark-malhotra")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra])],
   [#box(original-link("https://github.com/SqrtNegativOne")[#fa-icon("github", size: 0.9em) #h(0.05cm)SqrtNegativOne])],
 )
 #connections(connections-list)
@@ -494,7 +494,7 @@
 
 #two-col-entry(
   left-content: [
-    #strong[ML Engineer], GDSC Society 
+    #strong[ML Member, ML Department Mentor], Google Developer Student Club NSUT 
   ],
   right-content: [
     Nov 2024 – present
@@ -502,14 +502,14 @@
 )
 #one-col-entry(
   content: [
-    #v(design-highlights-top-margin);#highlights([Contributed to society projects such as #link("https://github.com/SqrtNegativOne/makemore")[makemore], #link("https://github.com/SqrtNegativOne/AI-factcheck")[AI factchecking].],)
+    #v(design-highlights-top-margin);#highlights([Contributed to society projects such as #link("https://github.com/SqrtNegativOne/makemore")[makemore] \(character level text generator using PyTorch\), #link("https://github.com/SqrtNegativOne/AI-factcheck")[AI factchecking], and the code for the #link("https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448")[Zero Day Apocalypse] competition under the society's flagship event.],[Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after #link("https://github.com/SqrtNegativOne/competition-dataset-generation")[coding a dataset] for the #link("https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview")[Kaggle competition] witnessing participation from 200+ teams from 4 countries, and conducting interviews.],)
   ],
 )
 
 #v(design-entries-vertical-space-between-entries)
 #two-col-entry(
   left-content: [
-    #strong[ML Engineer], TDS Society 
+    #strong[ML Engineer], Team Debugging Society 
   ],
   right-content: [
     Oct 2024 – present
@@ -517,14 +517,14 @@
 )
 #one-col-entry(
   content: [
-    #v(design-highlights-top-margin);#highlights([Organised and helped judge an inter-college data science competition with 50+ participants.],)
+    #v(design-highlights-top-margin);#highlights([Organised and helped judge an #link("https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127")[inter-college data science competition] with 50+ participants.],)
   ],
 )
 
 #v(design-entries-vertical-space-between-entries)
 #two-col-entry(
   left-content: [
-    #strong[DSA Specialist], D'Code society 
+    #strong[Content Writer and Research, Executive Committee Member], Axiom \(The Philosophy Society\) 
   ],
   right-content: [
     Oct 2024 – present
@@ -532,7 +532,7 @@
 )
 #one-col-entry(
   content: [
-    #v(design-highlights-top-margin);#highlights([Helped organise six society events in Oblivion'25.],)
+    #v(design-highlights-top-margin);#highlights([Managed recruitment for 145 applicants, selecting 30 members for the society after reviewing responses, conducting interviews, and coordinating with the team.],)
   ],
 )
 
@@ -541,6 +541,23 @@
 == Projects
 
 
+#two-col-entry(
+  left-content: [
+    #link("https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf")[#strong[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation]] 
+  ],
+  right-content: [
+    Sept 2025 – Oct 2025
+  ],
+)
+#one-col-entry(
+  content: [
+    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [SIH 2025 Project])], column-gutter: 0cm)
+
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.],[Selected as one of the top 90 teams from over 200 teams in the college.],[Implemented a FastAPI backend to connect a PydanticAI agent with data sources from multiple ARGO missions.],)
+  ],
+)
+
+#v(design-entries-vertical-space-between-entries)
 #two-col-entry(
   left-content: [
     #link("https://github.com/SqrtNegativOne/AI-factcheck")[#strong[Modular AI Factchecking Pipeline]] 
@@ -553,7 +570,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for an AI factchecking app.])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed, class-local imports and cache for speed improvements.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.],)
   ],
 )
 
@@ -563,14 +580,14 @@
     #link("https://github.com/SqrtNegativOne/sqrtnegativone.github.io")[#strong[Personal Website]] 
   ],
   right-content: [
-    Oct 2024 – present
+    Oct 2024 – July 2025
   ],
 )
 #one-col-entry(
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Portfolio website and blog])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Built using raw HTML CSS and Javascript, and Eleventy for blog.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Built using raw HTML CSS and Javascript, and Eleventy framework for blogging.],[Implements responsive-design, a markdown engine, and an RSS feed.],)
   ],
 )
 
@@ -587,7 +604,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed game-theory-inspired agent to win at the old game of Hand cricket by detecting patterns in user's moves.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed game-theory-inspired agent to win at the old game of Hand cricket by analyzing common patterns in user's moves.],)
   ],
 )
 
@@ -601,15 +618,11 @@
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Technologies:] Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git]
+  content: [#strong[Technologies:] HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, Docker, Matplotlib]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
   content: [#strong[Core Concepts:] Machine Learning, Artificial Intelligence, Backend, Object Oriented Programming]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Societies:] Team Debugging Society \(ML Engineer\), Google Developer Student Club \(ML Engineer\), D'Code \(DSA Specialist\), Axiom the Phiosophy society \(Content and newsletter writer\)]
 )
 
 
