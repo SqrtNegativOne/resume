@@ -32,7 +32,8 @@ cv:
         location: ''
         summary:
         highlights:
-          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the society's flagship event Shunya.
+          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the [Zero Day Apocalypse](https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448) competition under the society's flagship event.
+          - Created an open [Kaggle competition](https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml) witnessing participation from 230 entrants 
       - company: TDS Society
         position: ML Engineer
         date:
@@ -42,7 +43,7 @@ cv:
         summary:
         highlights:
           - Organised and helped judge an inter-college data science competition with 50+ participants.
-      - company: Axiom
+      - company: Axiom (The Philosophy Society)
         position: Executive Committee Member
         date:
         start_date: 2024-10
@@ -53,7 +54,7 @@ cv:
           - Helped organise six society events in Oblivion'25.
 
     projects:
-      - name: '[FloatChat](https://github.com/SqrtNegativOne/resume/blob/main/Copy%20of%20Problem%20Statement%20ID%20%E2%80%93%20SIH25040%20Problem%20Statement%20Title-%20Theme-%20Miscellaneous%20PS%20Category-%20Software%20Team%20ID-%20Team%20Name%20-%20Hacknovaters.pdf)'
+      - name: '[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation](https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf)'
         date:
         start_date: 2025-09
         end_date: 2025-10
@@ -61,6 +62,7 @@ cv:
         summary: SIH 2025 Project
         highlights:
           - Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
+          - Selected as one of the top 90 teams from over 200 teams in the college.
           - Implemented a FastAPI backend to handle user queries and manage interactions with the AI model that integrates with the frontend.
           - Integrated multiple real-time oceanographic data sources from multiple ARGO missions into a unified pipeline with caching for efficient retrieval by the AI agent.
           - Used PydanticAI and tooling to ensure data validation and consistency across the data pipeline.
@@ -93,11 +95,11 @@ cv:
       - label: Languages
         details: 'C++, C, C#, Javascript, Typescript, Python'
       - label: Technologies
-        details: 'Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git'
+        details: 'HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git'
       - label: Core Concepts
         details: 'Machine Learning, Artificial Intelligence, Backend, Object Oriented Programming'
       - label: Societies
-        details: Team Debugging Society (ML Engineer), Google Developer Student Club (ML Engineer), D'Code (DSA Specialist), Axiom the Phiosophy society (Content and newsletter writer)
+        details: Team Debugging Society (ML Engineer), Google Developer Student Club (ML Engineer), D'Code (DSA Specialist), Axiom the Philosophy Society (Content and newsletter writer)
 
 design:
   theme: engineeringclassic
