@@ -25,14 +25,14 @@ cv:
 
     experience:
       - company: GDSC Society
-        position: ML Engineer
+        position: ML Department Mentor
         date:
         start_date: 2024-11
         end_date: present
         location: ''
         summary:
         highlights:
-          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck).
+          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the society's flagship event Shunya.
       - company: TDS Society
         position: ML Engineer
         date:
@@ -42,8 +42,8 @@ cv:
         summary:
         highlights:
           - Organised and helped judge an inter-college data science competition with 50+ participants.
-      - company: D'Code society
-        position: DSA Specialist
+      - company: Axiom
+        position: Executive Committee Member
         date:
         start_date: 2024-10
         end_date: present
@@ -53,6 +53,17 @@ cv:
           - Helped organise six society events in Oblivion'25.
 
     projects:
+      - name: '[FloatChat](https://github.com/SqrtNegativOne/sqrtnegativone.github.io)'
+        date:
+        start_date: 2025-09
+        end_date: 2025-10
+        location:
+        summary: SIH 2025 Project
+        highlights:
+          - Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
+          - Implemented a FastAPI backend to handle user queries and manage interactions with the AI model that integrates with the frontend.
+          - Integrated multiple real-time oceanographic data sources from multiple ARGO missions into a unified pipeline with caching for efficient retrieval by the AI agent.
+          - Used PydanticAI and tooling to ensure data validation and consistency across the data pipeline.
       - name: '[Modular AI Factchecking Pipeline](https://github.com/SqrtNegativOne/AI-factcheck)'
         date:
         start_date: 2025-06
@@ -64,7 +75,7 @@ cv:
       - name: '[Personal Website](https://github.com/SqrtNegativOne/sqrtnegativone.github.io)'
         date:
         start_date: 2024-10
-        end_date: present
+        end_date: 2025-07
         location:
         summary: Portfolio website and blog
         highlights:
