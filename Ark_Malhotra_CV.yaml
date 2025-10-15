@@ -21,19 +21,20 @@ cv:
         location: New Delhi, India
         summary:
         highlights:
-          - 'CGPA: 8.6'
+          - 'CGPA: 8.3 (1+2 semesters)'
 
     experience:
       - company: Google Developer Student Club NSUT
-        position: ML Member, ML Department Mentor
+        position: ML Department Mentor
         date:
         start_date: 2024-11
         end_date: present
         location: ''
         summary:
         highlights:
-          - Contributed to society projects such as [makemore](https://github.com/SqrtNegativOne/makemore) (character level text generator using PyTorch), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the [Zero Day Apocalypse](https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448) competition under the society's flagship event.
+          - Contributed to society projects such as **[makemore](https://github.com/SqrtNegativOne/makemore)** (character level text generator using **PyTorch**), [AI factchecking](https://github.com/SqrtNegativOne/AI-factcheck), and the code for the [Zero Day Apocalypse](https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448) competition under the society's flagship event.
           - Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after [coding a dataset](https://github.com/SqrtNegativOne/competition-dataset-generation) for the [Kaggle competition](https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview) witnessing participation from 200+ teams from 4 countries, and conducting interviews.
+          - Ranked **[top 17%](https://www.kaggle.com/sqrtnegativ1/competitions)** in an international ML Kaggle competition with a team of three, using libraries such as scikit-learn, pandas, numpy, matplotlib, and seaborn for EDA and baseline models.
       - company: Team Debugging Society
         position: ML Engineer
         date:
@@ -42,17 +43,7 @@ cv:
         location: ''
         summary:
         highlights:
-          - Organised and helped judge an [inter-college data science competition](https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127) with 50+ participants.
-      - company: Axiom (The Philosophy Society)
-        position: Content Writer and Research, Executive Committee Member
-        date:
-        start_date: 2024-10
-        end_date: present
-        location: ''
-        summary:
-        highlights:
-          - Managed recruitment for 145 applicants, selecting 30 members for the society after reviewing responses, conducting interviews, and coordinating with the team.
-
+          - Organised and helped judge an [inter-college data science ML competition](https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127) with 50+ participants.
     projects:
       - name: '[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation](https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf)'
         date:
@@ -61,9 +52,12 @@ cv:
         location:
         summary: SIH 2025 Project
         highlights:
-          - Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
+          - Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
           - Selected as one of the top 90 teams from over 200 teams in the college.
-          - Implemented a FastAPI backend to connect a PydanticAI agent with data sources from multiple ARGO missions.
+          - Used **FastAPI** to build a **REST API** backend for modularity and compatibility with various frontends.
+          - Exposed an **MCP** interface to allow AI agents to connect with ARGO Oceanographic **API endpoints**.
+          - Used **PydanticAI** and **LangChain** to implement efficient **RAG** pipeline for context retrieval and response generation.
+          - Used **Docker** for containerization and easy deployment.
       - name: '[Modular AI Factchecking Pipeline](https://github.com/SqrtNegativOne/AI-factcheck)'
         date:
         start_date: 2025-06
@@ -72,6 +66,8 @@ cv:
         summary: Python backend for an AI factchecking app.
         highlights:
           - Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.
+          - Used local LLMs through **Ollama** for cost-efficiency.
+          - Used **LangChain** for **RAG** to achieve better accuracy and context-awareness.
       - name: '[Personal Website](https://github.com/SqrtNegativOne/sqrtnegativone.github.io)'
         date:
         start_date: 2024-10
@@ -79,7 +75,7 @@ cv:
         location:
         summary: Portfolio website and blog
         highlights:
-          - Built using raw HTML CSS and Javascript, and Eleventy framework for blogging.
+          - Built using **HTML**, **CSS**, and **Typescript** with the Eleventy framework for blogging.
           - Implements responsive-design, a markdown engine, and an RSS feed.
       - name: '[Hand Cricket Multi-Agent Bandit model](https://github.com/SqrtNegativOne/hand-cricket-MAB)'
         date:
@@ -88,15 +84,16 @@ cv:
         location:
         summary: Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.
         highlights:
-          - Statically typed game-theory-inspired agent to win at the old game of Hand cricket by analyzing common patterns in user's moves.
+          - Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.
+          - Multi-armed-bandit using Experts-As-Arms model composed of **PyTorch neural networks**, n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.
 
     skills:
       - label: Languages
         details: 'C++, C, C#, Javascript, Typescript, Python'
       - label: Technologies
-        details: 'HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, Docker, Matplotlib'
+        details: 'HTML, CSS, Javascript, Typescript, Python, Tailwind, Svelte, Git, Docker, FastAPI, REST API, Django, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn'
       - label: Core Concepts
-        details: 'Machine Learning, Artificial Intelligence, Backend, Object Oriented Programming'
+        details: 'Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming'
 
 design:
   theme: engineeringclassic

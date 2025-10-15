@@ -455,7 +455,7 @@
   [#box(original-link("mailto:ark.malhotra.ug24@nsut.ac.in")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)ark.malhotra.ug24\@nsut.ac.in])],
   [#box(original-link("tel:+91-83688-13202")[#fa-icon("phone", size: 0.9em) #h(0.05cm)083688 13202])],
   [#box(original-link("https://sqrtnegativone.github.io/")[#fa-icon("link", size: 0.9em) #h(0.05cm)sqrtnegativone.github.io])],
-  [#box(original-link("https://linkedin.com/in/ark-malhotra")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra])],
+  [#box(original-link("https://linkedin.com/in/ark-malhotra/")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra\/])],
   [#box(original-link("https://github.com/SqrtNegativOne")[#fa-icon("github", size: 0.9em) #h(0.05cm)SqrtNegativOne])],
 )
 #connections(connections-list)
@@ -479,7 +479,7 @@
 #block(
   [
     #set par(spacing: 0pt)
-    #v(design-highlights-top-margin);#highlights([CGPA: 8.6],)
+    #v(design-highlights-top-margin);#highlights([CGPA: 8.3 \(1+2 semesters\)],)
   ],
   inset: (
     left: design-entry-types-education-entry-degree-column-width + design-entries-horizontal-space-between-columns + design-entries-left-and-right-margin,
@@ -494,7 +494,7 @@
 
 #two-col-entry(
   left-content: [
-    #strong[ML Member, ML Department Mentor], Google Developer Student Club NSUT 
+    #strong[ML Department Mentor], Google Developer Student Club NSUT 
   ],
   right-content: [
     Nov 2024 – present
@@ -502,7 +502,7 @@
 )
 #one-col-entry(
   content: [
-    #v(design-highlights-top-margin);#highlights([Contributed to society projects such as #link("https://github.com/SqrtNegativOne/makemore")[makemore] \(character level text generator using PyTorch\), #link("https://github.com/SqrtNegativOne/AI-factcheck")[AI factchecking], and the code for the #link("https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448")[Zero Day Apocalypse] competition under the society's flagship event.],[Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after #link("https://github.com/SqrtNegativOne/competition-dataset-generation")[coding a dataset] for the #link("https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview")[Kaggle competition] witnessing participation from 200+ teams from 4 countries, and conducting interviews.],)
+    #v(design-highlights-top-margin);#highlights([Contributed to society projects such as #link("https://github.com/SqrtNegativOne/makemore")[#strong[makemore]] \(character level text generator using #strong[PyTorch]\), #link("https://github.com/SqrtNegativOne/AI-factcheck")[AI factchecking], and the code for the #link("https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448")[Zero Day Apocalypse] competition under the society's flagship event.],[Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after #link("https://github.com/SqrtNegativOne/competition-dataset-generation")[coding a dataset] for the #link("https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview")[Kaggle competition] witnessing participation from 200+ teams from 4 countries, and conducting interviews.],[Ranked #link("https://www.kaggle.com/sqrtnegativ1/competitions")[#strong[top 17\%]] in an international ML Kaggle competition with a team of three, using libraries such as scikit-learn, pandas, numpy, matplotlib, and seaborn for EDA and baseline models.],)
   ],
 )
 
@@ -517,22 +517,7 @@
 )
 #one-col-entry(
   content: [
-    #v(design-highlights-top-margin);#highlights([Organised and helped judge an #link("https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127")[inter-college data science competition] with 50+ participants.],)
-  ],
-)
-
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[Content Writer and Research, Executive Committee Member], Axiom \(The Philosophy Society\) 
-  ],
-  right-content: [
-    Oct 2024 – present
-  ],
-)
-#one-col-entry(
-  content: [
-    #v(design-highlights-top-margin);#highlights([Managed recruitment for 145 applicants, selecting 30 members for the society after reviewing responses, conducting interviews, and coordinating with the team.],)
+    #v(design-highlights-top-margin);#highlights([Organised and helped judge an #link("https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127")[inter-college data science ML competition] with 50+ participants.],)
   ],
 )
 
@@ -553,7 +538,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [SIH 2025 Project])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Collaborated with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.],[Selected as one of the top 90 teams from over 200 teams in the college.],[Implemented a FastAPI backend to connect a PydanticAI agent with data sources from multiple ARGO missions.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.],[Selected as one of the top 90 teams from over 200 teams in the college.],[Used #strong[FastAPI] to build a #strong[REST API] backend for modularity and compatibility with various frontends.],[Exposed an #strong[MCP] interface to allow AI agents to connect with ARGO Oceanographic #strong[API endpoints].],[Used #strong[PydanticAI] and #strong[LangChain] to implement efficient #strong[RAG] pipeline for context retrieval and response generation.],[Used #strong[Docker] for containerization and easy deployment.],)
   ],
 )
 
@@ -570,7 +555,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for an AI factchecking app.])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.],[Used local LLMs through #strong[Ollama] for cost-efficiency.],[Used #strong[LangChain] for #strong[RAG] to achieve better accuracy and context-awareness.],)
   ],
 )
 
@@ -587,7 +572,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Portfolio website and blog])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Built using raw HTML CSS and Javascript, and Eleventy framework for blogging.],[Implements responsive-design, a markdown engine, and an RSS feed.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Built using #strong[HTML], #strong[CSS], and #strong[Typescript] with the Eleventy framework for blogging.],[Implements responsive-design, a markdown engine, and an RSS feed.],)
   ],
 )
 
@@ -604,7 +589,7 @@
   content: [
     #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed game-theory-inspired agent to win at the old game of Hand cricket by analyzing common patterns in user's moves.],)
+#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.],[Multi-armed-bandit using Experts-As-Arms model composed of #strong[PyTorch neural networks], n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.],)
   ],
 )
 
@@ -618,11 +603,11 @@
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Technologies:] HTML, CSS, Svelte, Tailwind, PyTorch, Matplotlib, FastAPI, Git, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, Docker, Matplotlib]
+  content: [#strong[Technologies:] HTML, CSS, Javascript, Typescript, Python, Tailwind, Svelte, Git, Docker, FastAPI, REST API, Django, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn]
 )
 #v(design-entries-vertical-space-between-entries)
 #one-col-entry(
-  content: [#strong[Core Concepts:] Machine Learning, Artificial Intelligence, Backend, Object Oriented Programming]
+  content: [#strong[Core Concepts:] Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming]
 )
 
 
