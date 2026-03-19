@@ -4,7 +4,7 @@
 - Email: [ark.malhotra.ug24@nsut.ac.in](mailto:ark.malhotra.ug24@nsut.ac.in)
 - Location: New Delhi, India
 - Website: [sqrtnegativone.github.io](https://sqrtnegativone.github.io/)
-- LinkedIn: [ark-malhotra/](https://linkedin.com/in/ark-malhotra/)
+- LinkedIn: [ark-malhotra](https://linkedin.com/in/ark-malhotra)
 - GitHub: [SqrtNegativOne](https://github.com/SqrtNegativOne)
 
 
