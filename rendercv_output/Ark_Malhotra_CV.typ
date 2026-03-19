@@ -6,7 +6,6 @@
 #let locale-catalog-last-updated-date-style = "Last updated in July 2025"
 #let locale-catalog-language = "en"
 #let design-page-size = "a4"
-#let design-section-titles-font-size = 1.4em
 #let design-colors-text = rgb(0, 0, 0)
 #let design-colors-section-titles = rgb(0, 79, 144)
 #let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
@@ -17,7 +16,7 @@
 #let design-section-titles-bold = false
 #let design-section-titles-line-thickness = 0.5pt
 #let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "with-parial-line"
+#let design-section-titles-type = "with-partial-line"
 #let design-section-titles-vertical-space-above = 0.5cm
 #let design-section-titles-vertical-space-below = 0.3cm
 #let design-section-titles-small-caps = false
@@ -32,15 +31,17 @@
 #let design-header-name-font-family = "Raleway"
 #let design-header-name-font-size = 30pt
 #let design-header-name-bold = false
+#let design-header-small-caps-for-name = false
 #let design-header-connections-font-family = "Raleway"
 #let design-header-vertical-space-between-name-and-connections = 0.7cm
 #let design-header-vertical-space-between-connections-and-first-section = 0.7cm
 #let design-header-use-icons-for-connections = true
-#let design-header-horizontal-space-between-connections = 0.5cm
+#let design-header-horizontal-space-between-connections = 0cm
 #let design-header-separator-between-connections = ""
 #let design-header-alignment = left
 #let design-highlights-summary-left-margin = 0cm
 #let design-highlights-bullet = "•"
+#let design-highlights-nested-bullet = "-"
 #let design-highlights-top-margin = 0.25cm
 #let design-highlights-left-margin = 0cm
 #let design-highlights-vertical-space-between-highlights = 0.25cm
@@ -125,13 +126,22 @@
   )
 }
 #show list: set list(
-  marker: design-highlights-bullet,
-  spacing: 0pt,
+  marker: design-highlights-nested-bullet,
+  spacing: design-highlights-vertical-space-between-highlights,
   indent: 0pt,
   body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
 )
 
 // Entry utilities:
+#let bullet-entry(..content) = {
+  list(
+    ..content,
+    marker: design-highlights-bullet,
+    spacing: 0pt,
+    indent: 0pt,
+    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
+  )
+}
 #let three-col(
   left-column-width: 1fr,
   middle-column-width: 1fr,
@@ -192,7 +202,11 @@
     size: design-header-name-font-size,
     fill: design-colors-name,
   )
-  #it.body
+  #if design-header-small-caps-for-name [
+    #smallcaps(it.body)
+  ] else [
+    #it.body
+  ]
   // Vertical space after the name
   #v(design-header-vertical-space-between-name-and-connections)
 ]
@@ -243,7 +257,7 @@
         #box(
           [
             #section-title
-            #if design-section-titles-type == "with-parial-line" [
+            #if design-section-titles-type == "with-partial-line" [
               #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
             ] else if design-section-titles-type == "with-full-line" [
 
@@ -455,7 +469,7 @@
   [#box(original-link("mailto:ark.malhotra.ug24@nsut.ac.in")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)ark.malhotra.ug24\@nsut.ac.in])],
   [#box(original-link("tel:+91-83688-13202")[#fa-icon("phone", size: 0.9em) #h(0.05cm)083688 13202])],
   [#box(original-link("https://sqrtnegativone.github.io/")[#fa-icon("link", size: 0.9em) #h(0.05cm)sqrtnegativone.github.io])],
-  [#box(original-link("https://linkedin.com/in/ark-malhotra/")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra\/])],
+  [#box(original-link("https://linkedin.com/in/ark-malhotra")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra])],
   [#box(original-link("https://github.com/SqrtNegativOne")[#fa-icon("github", size: 0.9em) #h(0.05cm)SqrtNegativOne])],
 )
 #connections(connections-list)
