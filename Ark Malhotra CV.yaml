@@ -1,0 +1,140 @@
+cv:
+  name: Ark Malhotra
+  location: New Delhi, India
+  email: ark.malhotra.ug24@nsut.ac.in
+  phone: +91-8368813202
+  website: https://sqrt.fyi
+  social_networks:
+    - network: LinkedIn
+      username: ark-malhotra
+    - network: GitHub
+      username: SqrtNegativOne
+
+  sections:
+    education:
+      - institution: Netaji Subash University of Technology
+        area: CSE
+        degree: B.Tech 
+        date:
+        start_date: 2024-08
+        end_date: 2028-06
+        location: New Delhi, India
+        summary:
+        highlights:
+          - 'CGPA: 8.09 (top 16.5% of the class)'
+      - institution: Amity International School, Saket
+        degree: High School Diploma
+        area: Physics, Chemistry, Mathematics, Computer Science, English
+        date:
+        start_date:
+        end_date:
+        location: New Delhi, India
+        summary:
+        highlights:
+          - '93% in CBSE Class 12 Board Exams'
+      - institution: Amity International School, Saket
+        degree: Middle School Diploma
+        area: Science, Social Studies, Mathematics, Artificial Intelligence, English
+        date:
+        start_date:
+        end_date:
+        location: New Delhi, India
+        summary:
+        highlights:
+          - '94.8% in CBSE Class 10 Board Exams'
+
+    experience:
+      - company: IIT Madras - Computational Multiphysics Research Group
+        position: Research Intern
+        date:
+        start_date: 2026-01
+        end_date: 2026-06
+        location: Chennai, India (Remote)
+        summary: "PyAMorph: High-Fidelity Implicit Geometry Modelling and Morphometric Analysis on Adaptive Meshes"
+        highlights:
+          - Co-developed PyAMorph, an open-source **high-performance computational physics
+            library** for implicit geometry modelling using Signed Distance Functions and levelsets,
+            supporting 2D/3D CSG composition, TPMS metamaterial lattices, STL mesh
+            import, and unsupervised image segmentation (image-to-geometry) with morphometric analysis
+          - Integrated with AMReX, a **massively parallel** C++ framework used in
+            petascale supercomputing applications, enabling scalable SDF field evaluation
+            on adaptive multi-level grids across distributed MPI ranks
+          - Accelerated the computational pipeline with GPU backends via **CuPy** and
+            NVIDIA Warp
+
+
+    projects:
+      - name: '[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation](https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf)'
+        date:
+        start_date: 2025-09
+        end_date: 2025-10
+        location:
+        summary: SIH 2025 Project
+        highlights:
+          - Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.  
+          - Selected as one of the top 90 teams from over 200 teams in the college.
+          - Used **FastAPI** to build a **REST API** backend for modularity and compatibility with various frontends.
+          - Exposed an **MCP** interface to allow AI agents to connect with ARGO Oceanographic **API endpoints**.
+          - Used **PydanticAI** and **LangChain** to implement efficient **RAG** pipeline for context retrieval and response generation.
+          - Used **Docker** for containerization and easy deployment.
+
+      - name: '[Personal Website](https://sqrt.fyi)'
+        date:
+        start_date: 2024-10
+        end_date: 2025-07
+        location:
+        summary: Portfolio website and blog
+        highlights:
+          - Built using **React** with the Eleventy framework for blogging.
+          - Implements responsive-design, a markdown engine, and an RSS feed.
+          
+      - name: '[Hand Cricket Multi-Agent Bandit model](https://github.com/SqrtNegativOne/hand-cricket-MAB)'
+        date:
+        start_date: 2025-06
+        end_date: 2025-06
+        location:
+        summary: Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.
+        highlights:
+          - Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.
+          - Multi-armed-bandit using Experts-As-Arms model composed of **PyTorch neural networks**, n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.
+
+    skills:
+      - label: Languages
+        details: 'C++, C, C#, Javascript, Typescript, Python'
+      - label: Technologies
+        details: 'HTML, CSS, Javascript, Typescript, Python, Git, Docker, FastAPI, REST API, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn'
+      - label: Core Concepts
+        details: 'Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming'
+
+design:
+  theme: classic
+  page:
+    size: a4
+    top_margin: 1cm
+    bottom_margin: 1cm
+    left_margin: 1cm
+    right_margin: 1cm
+  colors:
+    name: rgb(0, 79, 144)
+    connections: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)
+    links: rgb(0, 79, 144)
+  links:
+    underline: false
+  header:
+    photo_width: 3.5cm
+    alignment: center
+  section_titles:
+    type: with_partial_line
+    line_thickness: 0.5pt
+  entries:
+    date_and_location_width: 4.15cm
+    short_second_row: false
+
+locale:
+  language: english
+  month: month
+  months: months
+  year: year
+  years: years
+  present: present

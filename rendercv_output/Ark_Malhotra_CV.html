@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>
-        Ark Malhotra's CV
+        
     </title>
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-light.min.css"
@@ -39,71 +39,111 @@
 
 <body>
     <article class="markdown-body">
-        <h1>Ark Malhotra's CV</h1>
+        <h1>&lt;<cv.name>&gt;'s CV</h1>
+        <p>((<em> if cv.phone </em>))
+        - Phone: &lt;<cv.phone|replace("tel:", "")|replace("-"," ")>&gt;
+        ((<em> endif </em>))
+        ((<em> if cv.email </em>))
+        - Email: <a href="mailto:&lt;&lt;cv.email&gt;&gt;">&lt;<cv.email>&gt;</a>
+        ((<em> endif </em>))
+        ((<em> if cv.location </em>))
+        - Location: &lt;<cv.location>&gt;
+        ((<em> endif </em>))
+        ((<em> if cv.website </em>))
+        - Website: <a href="&lt;&lt;cv.website&gt;&gt;">&lt;<cv.website|replace("https://","")|replace("/","")>&gt;</a>
+        ((<em> endif </em>))
+        ((<em> if cv.social_networks </em>))
+            ((<em> for network in cv.social_networks </em>))
+        - &lt;<network.network>&gt;: <a href="&lt;&lt;network.url&gt;&gt;">&lt;<network.username>&gt;</a>
+            ((<em> endfor </em>))
+        ((<em> endif </em>))</p>
+        <h1>&lt;<section_title>&gt;</h1>
+        <h2><strong>Netaji Subash University of Technology</strong>, CSE</h2>
+        <p><strong>B.Tech</strong></p>
+        <p>New Delhi, India</p>
+        <p>Aug 2024 – June 2028</p>
         <ul>
-        <li>Phone: +91 83688 13202</li>
-        <li>Email: <a href="mailto:ark.malhotra.ug24@nsut.ac.in">ark.malhotra.ug24@nsut.ac.in</a></li>
-        <li>Location: New Delhi, India</li>
-        <li>Website: <a href="https://sqrtnegativone.github.io/">sqrtnegativone.github.io</a></li>
-        <li>LinkedIn: <a href="https://linkedin.com/in/ark-malhotra">ark-malhotra</a></li>
-        <li>GitHub: <a href="https://github.com/SqrtNegativOne">SqrtNegativOne</a></li>
+        <li>CGPA: 8.09 (top 16.5% of the class)</li>
         </ul>
-        <h1>Education</h1>
-        <h2>Netaji Subash University of Technology, B.Tech in CSE</h2>
+        <h2><strong>Amity International School, Saket</strong>, Physics, Chemistry, Mathematics, Computer Science, English</h2>
+        <p><strong>High School Diploma</strong></p>
+        <p>New Delhi, India</p>
         <ul>
-        <li>Aug 2024 – June 2028</li>
-        <li>New Delhi, India</li>
-        <li>CGPA: 8.3 (1+2 semesters)</li>
+        <li>93% in CBSE Class 12 Board Exams</li>
         </ul>
-        <h1>Experience</h1>
-        <h2>Google Developer Student Club NSUT, ML Department Mentor</h2>
+        <h2><strong>Amity International School, Saket</strong>, Science, Social Studies, Mathematics, Artificial Intelligence, English</h2>
+        <p><strong>Middle School Diploma</strong></p>
+        <p>New Delhi, India</p>
         <ul>
-        <li>Nov 2024 – present</li>
-        <li>Contributed to society projects such as <strong><a href="https://github.com/SqrtNegativOne/makemore">makemore</a></strong> (character level text generator using <strong>PyTorch</strong>), <a href="https://github.com/SqrtNegativOne/AI-factcheck">AI factchecking</a>, and the code for the <a href="https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448">Zero Day Apocalypse</a> competition under the society's flagship event.</li>
-        <li>Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after <a href="https://github.com/SqrtNegativOne/competition-dataset-generation">coding a dataset</a> for the <a href="https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview">Kaggle competition</a> witnessing participation from 200+ teams from 4 countries, and conducting interviews.</li>
-        <li>Ranked <strong><a href="https://www.kaggle.com/sqrtnegativ1/competitions">top 17%</a></strong> in an international ML Kaggle competition with a team of three, using libraries such as scikit-learn, pandas, numpy, matplotlib, and seaborn for EDA and baseline models.</li>
+        <li>94.8% in CBSE Class 10 Board Exams</li>
         </ul>
-        <h2>Team Debugging Society, ML Engineer</h2>
+        <h1>&lt;<section_title>&gt;</h1>
+        <h2><strong>IIT Madras - Computational Multiphysics Research Group</strong>, Research Intern</h2>
+        <p>Chennai, India (Remote)</p>
+        <p>Jan 2026 – June 2026</p>
+        <p>6 months</p>
+        <p>PyAMorph: High-Fidelity Implicit Geometry Modelling and Morphometric Analysis on Adaptive Meshes</p>
         <ul>
-        <li>Oct 2024 – present</li>
-        <li>Organised and helped judge an <a href="https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127">inter-college data science ML competition</a> with 50+ participants.</li>
+        <li>
+        <p>Co-developed PyAMorph, an open-source <strong>high-performance computational physics library</strong> for implicit geometry modelling using Signed Distance Functions and levelsets, supporting 2D/3D CSG composition, TPMS metamaterial lattices, STL mesh import, and unsupervised image segmentation (image-to-geometry) with morphometric analysis</p>
+        </li>
+        <li>
+        <p>Integrated with AMReX, a <strong>massively parallel</strong> C++ framework used in petascale supercomputing applications, enabling scalable SDF field evaluation on adaptive multi-level grids across distributed MPI ranks</p>
+        </li>
+        <li>
+        <p>Accelerated the computational pipeline with GPU backends via <strong>CuPy</strong> and NVIDIA Warp</p>
+        </li>
         </ul>
-        <h1>Projects</h1>
-        <h2><a href="https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf">Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation</a></h2>
+        <h1>&lt;<section_title>&gt;</h1>
+        <h2><strong><a href="https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf">Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation</a></strong></h2>
+        <p>Sept 2025 – Oct 2025</p>
+        <p>SIH 2025 Project</p>
         <ul>
-        <li>Sept 2025 – Oct 2025</li>
-        <li>Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.</li>
-        <li>Selected as one of the top 90 teams from over 200 teams in the college.</li>
-        <li>Used <strong>FastAPI</strong> to build a <strong>REST API</strong> backend for modularity and compatibility with various frontends.</li>
-        <li>Exposed an <strong>MCP</strong> interface to allow AI agents to connect with ARGO Oceanographic <strong>API endpoints</strong>.</li>
-        <li>Used <strong>PydanticAI</strong> and <strong>LangChain</strong> to implement efficient <strong>RAG</strong> pipeline for context retrieval and response generation.</li>
-        <li>Used <strong>Docker</strong> for containerization and easy deployment.</li>
+        <li>
+        <p>Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.</p>
+        </li>
+        <li>
+        <p>Selected as one of the top 90 teams from over 200 teams in the college.</p>
+        </li>
+        <li>
+        <p>Used <strong>FastAPI</strong> to build a <strong>REST API</strong> backend for modularity and compatibility with various frontends.</p>
+        </li>
+        <li>
+        <p>Exposed an <strong>MCP</strong> interface to allow AI agents to connect with ARGO Oceanographic <strong>API endpoints</strong>.</p>
+        </li>
+        <li>
+        <p>Used <strong>PydanticAI</strong> and <strong>LangChain</strong> to implement efficient <strong>RAG</strong> pipeline for context retrieval and response generation.</p>
+        </li>
+        <li>
+        <p>Used <strong>Docker</strong> for containerization and easy deployment.</p>
+        </li>
         </ul>
-        <h2><a href="https://github.com/SqrtNegativOne/AI-factcheck">Modular AI Factchecking Pipeline</a></h2>
+        <h2><strong><a href="https://sqrt.fyi">Personal Website</a></strong></h2>
+        <p>Oct 2024 – July 2025</p>
+        <p>Portfolio website and blog</p>
         <ul>
-        <li>June 2025 – July 2025</li>
-        <li>Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.</li>
-        <li>Used local LLMs through <strong>Ollama</strong> for cost-efficiency.</li>
-        <li>Used <strong>LangChain</strong> for <strong>RAG</strong> to achieve better accuracy and context-awareness.</li>
+        <li>
+        <p>Built using <strong>React</strong> with the Eleventy framework for blogging.</p>
+        </li>
+        <li>
+        <p>Implements responsive-design, a markdown engine, and an RSS feed.</p>
+        </li>
         </ul>
-        <h2><a href="https://github.com/SqrtNegativOne/sqrtnegativone.github.io">Personal Website</a></h2>
+        <h2><strong><a href="https://github.com/SqrtNegativOne/hand-cricket-MAB">Hand Cricket Multi-Agent Bandit model</a></strong></h2>
+        <p>June 2025 – June 2025</p>
+        <p>Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.</p>
         <ul>
-        <li>Oct 2024 – July 2025</li>
-        <li>Built using <strong>HTML</strong>, <strong>CSS</strong>, and <strong>Typescript</strong> with the Eleventy framework for blogging.</li>
-        <li>Implements responsive-design, a markdown engine, and an RSS feed.</li>
+        <li>
+        <p>Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.</p>
+        </li>
+        <li>
+        <p>Multi-armed-bandit using Experts-As-Arms model composed of <strong>PyTorch neural networks</strong>, n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.</p>
+        </li>
         </ul>
-        <h2><a href="https://github.com/SqrtNegativOne/hand-cricket-MAB">Hand Cricket Multi-Agent Bandit model</a></h2>
-        <ul>
-        <li>June 2025 – June 2025</li>
-        <li>Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.</li>
-        <li>Multi-armed-bandit using Experts-As-Arms model composed of <strong>PyTorch neural networks</strong>, n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.</li>
-        </ul>
-        <h1>Skills</h1>
-        <ul>
-        <li>Languages: C++, C, C#, Javascript, Typescript, Python</li>
-        <li>Technologies: HTML, CSS, Javascript, Typescript, Python, Tailwind, Svelte, Git, Docker, FastAPI, REST API, Django, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn</li>
-        <li>Core Concepts: Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming</li>
-        </ul>
+        <h1>&lt;<section_title>&gt;</h1>
+        <p><strong>Languages:</strong> C++, C, C#, Javascript, Typescript, Python</p>
+        <p><strong>Technologies:</strong> HTML, CSS, Javascript, Typescript, Python, Git, Docker, FastAPI, REST API, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn</p>
+        <p><strong>Core Concepts:</strong> Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming</p>
     </article>
 </body>
 

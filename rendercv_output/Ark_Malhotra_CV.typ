@@ -1,627 +1,261 @@
+// Import the rendercv function and all the refactored components
+#import "@preview/rendercv:0.3.0": *
 
-#import "@preview/fontawesome:0.5.0": fa-icon
-
-#let name = "Ark Malhotra"
-#let locale-catalog-page-numbering-style = context { "Ark Malhotra - Page " + str(here().page()) + " of " + str(counter(page).final().first()) + "" }
-#let locale-catalog-last-updated-date-style = "Last updated in July 2025"
-#let locale-catalog-language = "en"
-#let design-page-size = "a4"
-#let design-colors-text = rgb(0, 0, 0)
-#let design-colors-section-titles = rgb(0, 79, 144)
-#let design-colors-last-updated-date-and-page-numbering = rgb(128, 128, 128)
-#let design-colors-name = rgb(0, 79, 144)
-#let design-colors-connections = rgb(0, 79, 144)
-#let design-colors-links = rgb(0, 79, 144)
-#let design-section-titles-font-family = "Raleway"
-#let design-section-titles-bold = false
-#let design-section-titles-line-thickness = 0.5pt
-#let design-section-titles-font-size = 1.4em
-#let design-section-titles-type = "with-partial-line"
-#let design-section-titles-vertical-space-above = 0.5cm
-#let design-section-titles-vertical-space-below = 0.3cm
-#let design-section-titles-small-caps = false
-#let design-links-use-external-link-icon = false
-#let design-text-font-size = 10pt
-#let design-text-leading = 0.6em
-#let design-text-font-family = "Raleway"
-#let design-text-alignment = "justified"
-#let design-text-date-and-location-column-alignment = right
-#let design-header-photo-width = 3.5cm
-#let design-header-use-icons-for-connections = true
-#let design-header-name-font-family = "Raleway"
-#let design-header-name-font-size = 30pt
-#let design-header-name-bold = false
-#let design-header-small-caps-for-name = false
-#let design-header-connections-font-family = "Raleway"
-#let design-header-vertical-space-between-name-and-connections = 0.7cm
-#let design-header-vertical-space-between-connections-and-first-section = 0.7cm
-#let design-header-use-icons-for-connections = true
-#let design-header-horizontal-space-between-connections = 0.7cm
-#let design-header-separator-between-connections = ""
-#let design-header-alignment = center
-#let design-highlights-summary-left-margin = 0cm
-#let design-highlights-bullet = "•"
-#let design-highlights-nested-bullet = "-"
-#let design-highlights-top-margin = 0.25cm
-#let design-highlights-left-margin = 0cm
-#let design-highlights-vertical-space-between-highlights = 0.25cm
-#let design-highlights-horizontal-space-between-bullet-and-highlights = 0.5em
-#let design-entries-vertical-space-between-entries = 1.2em
-#let design-entries-date-and-location-width = 4.15cm
-#let design-entries-allow-page-break-in-entries = true
-#let design-entries-horizontal-space-between-columns = 0.1cm
-#let design-entries-left-and-right-margin = 0.2cm
-#let design-page-top-margin = 1cm
-#let design-page-bottom-margin = 1cm
-#let design-page-left-margin = 1cm
-#let design-page-right-margin = 1cm
-#let design-page-show-last-updated-date = false
-#let design-page-show-page-numbering = false
-#let design-links-underline = false
-#let design-entry-types-education-entry-degree-column-width = 1.4cm
-#let date = datetime.today()
-
-// Metadata:
-#set document(author: name, title: name + "'s CV", date: date)
-
-// Page settings:
-#set page(
-  margin: (
-    top: design-page-top-margin,
-    bottom: design-page-bottom-margin,
-    left: design-page-left-margin,
-    right: design-page-right-margin,
+// Apply the rendercv template with custom configuration
+#show: rendercv.with(
+  name: "Ark Malhotra",
+  title: "Ark Malhotra - CV",
+  footer: context { [#emph[Ark Malhotra -- #str(here().page())\/#str(counter(page).final().first())]] },
+  top-note: [ #emph[Last updated in Apr 2026] ],
+  locale-catalog-language: "en",
+  text-direction: ltr,
+  page-size: "a4",
+  page-top-margin: 1cm,
+  page-bottom-margin: 1cm,
+  page-left-margin: 1cm,
+  page-right-margin: 1cm,
+  page-show-footer: true,
+  page-show-top-note: true,
+  colors-body: rgb(0, 0, 0),
+  colors-name: rgb(0, 79, 144),
+  colors-headline: rgb(0, 79, 144),
+  colors-connections: rgb(0, 79, 144),
+  colors-section-titles: rgb(0, 79, 144),
+  colors-links: rgb(0, 79, 144),
+  colors-footer: rgb(128, 128, 128),
+  colors-top-note: rgb(128, 128, 128),
+  typography-line-spacing: 0.6em,
+  typography-alignment: "justified",
+  typography-date-and-location-column-alignment: right,
+  typography-font-family-body: "Source Sans 3",
+  typography-font-family-name: "Source Sans 3",
+  typography-font-family-headline: "Source Sans 3",
+  typography-font-family-connections: "Source Sans 3",
+  typography-font-family-section-titles: "Source Sans 3",
+  typography-font-size-body: 10pt,
+  typography-font-size-name: 30pt,
+  typography-font-size-headline: 10pt,
+  typography-font-size-connections: 10pt,
+  typography-font-size-section-titles: 1.4em,
+  typography-small-caps-name: false,
+  typography-small-caps-headline: false,
+  typography-small-caps-connections: false,
+  typography-small-caps-section-titles: false,
+  typography-bold-name: true,
+  typography-bold-headline: false,
+  typography-bold-connections: false,
+  typography-bold-section-titles: true,
+  links-underline: false,
+  links-show-external-link-icon: false,
+  header-alignment: center,
+  header-photo-width: 3.5cm,
+  header-space-below-name: 0.7cm,
+  header-space-below-headline: 0.7cm,
+  header-space-below-connections: 0.7cm,
+  header-connections-hyperlink: true,
+  header-connections-show-icons: true,
+  header-connections-display-urls-instead-of-usernames: false,
+  header-connections-separator: "",
+  header-connections-space-between-connections: 0.5cm,
+  section-titles-type: "with_partial_line",
+  section-titles-line-thickness: 0.5pt,
+  section-titles-space-above: 0.5cm,
+  section-titles-space-below: 0.3cm,
+  sections-allow-page-break: true,
+  sections-space-between-text-based-entries: 0.3em,
+  sections-space-between-regular-entries: 1.2em,
+  entries-date-and-location-width: 4.15cm,
+  entries-side-space: 0.2cm,
+  entries-space-between-columns: 0.1cm,
+  entries-allow-page-break: false,
+  entries-short-second-row: false,
+  entries-degree-width: 1cm,
+  entries-summary-space-left: 0cm,
+  entries-summary-space-above: 0cm,
+  entries-highlights-bullet:  "•" ,
+  entries-highlights-nested-bullet:  "•" ,
+  entries-highlights-space-left: 0.15cm,
+  entries-highlights-space-above: 0cm,
+  entries-highlights-space-between-items: 0cm,
+  entries-highlights-space-between-bullet-and-text: 0.5em,
+  date: datetime(
+    year: 2026,
+    month: 4,
+    day: 18,
   ),
-  paper: design-page-size,
-  footer: if design-page-show-page-numbering {
-    text(
-      fill: design-colors-last-updated-date-and-page-numbering,
-      align(center, [_#locale-catalog-page-numbering-style _]),
-      size: 0.9em,
-    )
-  } else {
-    none
-  },
-  footer-descent: 0% - 0.3em + design-page-bottom-margin / 2,
-)
-// Text settings:
-#let justify
-#let hyphenate
-#if design-text-alignment == "justified" {
-  justify = true
-  hyphenate = true
-} else if design-text-alignment == "left" {
-  justify = false
-  hyphenate = false
-} else if design-text-alignment == "justified-with-no-hyphenation" {
-  justify = true
-  hyphenate = false
-}
-#set text(
-  font: design-text-font-family,
-  size: design-text-font-size,
-  lang: locale-catalog-language,
-  hyphenate: hyphenate,
-  fill: design-colors-text,
-  // Disable ligatures for better ATS compatibility:
-  ligatures: true,
-)
-#set par(
-  spacing: 0pt,
-  leading: design-text-leading,
-  justify: justify,
-)
-#set enum(
-  spacing: design-entries-vertical-space-between-entries,
 )
 
-// Highlights settings:
-#let highlights(..content) = {
-  list(
-    ..content,
-    marker: design-highlights-bullet,
-    spacing: design-highlights-vertical-space-between-highlights,
-    indent: design-highlights-left-margin,
-    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
-  )
-}
-#show list: set list(
-  marker: design-highlights-nested-bullet,
-  spacing: design-highlights-vertical-space-between-highlights,
-  indent: 0pt,
-  body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
-)
-
-// Entry utilities:
-#let bullet-entry(..content) = {
-  list(
-    ..content,
-    marker: design-highlights-bullet,
-    spacing: 0pt,
-    indent: 0pt,
-    body-indent: design-highlights-horizontal-space-between-bullet-and-highlights,
-  )
-}
-#let three-col(
-  left-column-width: 1fr,
-  middle-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (auto, auto, auto),
-) = [
-  #block(
-    grid(
-      columns: (left-column-width, middle-column-width, right-column-width),
-      column-gutter: design-entries-horizontal-space-between-columns,
-      align: alignments,
-      ([#set par(spacing: design-text-leading); #left-content]),
-      ([#set par(spacing: design-text-leading); #middle-content]),
-      ([#set par(spacing: design-text-leading); #right-content]),
-    ),
-    breakable: true,
-    width: 100%,
-  )
-]
-
-#let two-col(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  right-content: "",
-  alignments: (auto, auto),
-  column-gutter: design-entries-horizontal-space-between-columns,
-) = [
-  #block(
-    grid(
-      columns: (left-column-width, right-column-width),
-      column-gutter: column-gutter,
-      align: alignments,
-      ([#set par(spacing: design-text-leading); #left-content]),
-      ([#set par(spacing: design-text-leading); #right-content]),
-    ),
-    breakable: true,
-    width: 100%,
-  )
-]
-
-// Main heading settings:
-#let header-font-weight
-#if design-header-name-bold {
-  header-font-weight = 700
-} else {
-  header-font-weight = 400
-}
-#show heading.where(level: 1): it => [
-  #set par(spacing: 0pt)
-  #set align(design-header-alignment)
-  #set text(
-    font: design-header-name-font-family,
-    weight: header-font-weight,
-    size: design-header-name-font-size,
-    fill: design-colors-name,
-  )
-  #if design-header-small-caps-for-name [
-    #smallcaps(it.body)
-  ] else [
-    #it.body
-  ]
-  // Vertical space after the name
-  #v(design-header-vertical-space-between-name-and-connections)
-]
-
-#let section-title-font-weight
-#if design-section-titles-bold {
-  section-title-font-weight = 700
-} else {
-  section-title-font-weight = 400
-}
-
-#show heading.where(level: 2): it => [
-  #set align(left)
-  #set text(size: (1em / 1.2)) // reset
-  #set text(
-    font: design-section-titles-font-family,
-    size: (design-section-titles-font-size),
-    weight: section-title-font-weight,
-    fill: design-colors-section-titles,
-  )
-  #let section-title = (
-    if design-section-titles-small-caps [
-      #smallcaps(it.body)
-    ] else [
-      #it.body
-    ]
-  )
-  // Vertical space above the section title
-  #v(design-section-titles-vertical-space-above, weak: true)
-  #block(
-    breakable: false,
-    width: 100%,
-    [
-      #if design-section-titles-type == "moderncv" [
-        #two-col(
-          alignments: (right, left),
-          left-column-width: design-entries-date-and-location-width,
-          right-column-width: 1fr,
-          left-content: [
-            #align(horizon, box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles))
-          ],
-          right-content: [
-            #section-title
-          ]
-        )
-
-      ] else [
-        #box(
-          [
-            #section-title
-            #if design-section-titles-type == "with-partial-line" [
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ] else if design-section-titles-type == "with-full-line" [
-
-              #v(design-text-font-size * 0.4)
-              #box(width: 1fr, height: design-section-titles-line-thickness, fill: design-colors-section-titles)
-            ]
-          ]
-        )
-      ]
-     ] + v(1em),
-  )
-  #v(-1em)
-  // Vertical space after the section title
-  #v(design-section-titles-vertical-space-below - 0.5em)
-]
-
-// Links:
-#let original-link = link
-#let link(url, body) = {
-  body = [#if design-links-underline [#underline(body)] else [#body]]
-  body = [#if design-links-use-external-link-icon [#body#h(design-text-font-size/4)#box(
-        fa-icon("external-link", size: 0.7em),
-        baseline: -10%,
-      )] else [#body]]
-  body = [#set text(fill: design-colors-links);#body]
-  original-link(url, body)
-}
-
-// Last updated date text:
-#if design-page-show-last-updated-date {
-  let dx
-  if design-section-titles-type == "moderncv" {
-    dx = 0cm
-  } else {
-    dx = -design-entries-left-and-right-margin
-  }
-  place(
-    top + right,
-    dy: -design-page-top-margin / 2,
-    dx: dx,
-    text(
-      [_#locale-catalog-last-updated-date-style _],
-      fill: design-colors-last-updated-date-and-page-numbering,
-      size: 0.9em,
-    ),
-  )
-}
-
-#let connections(connections-list) = context {
-  set text(fill: design-colors-connections, font: design-header-connections-font-family)
-  set par(leading: design-text-leading*1.7, justify: false)
-  let list-of-connections = ()
-  let separator = (
-    h(design-header-horizontal-space-between-connections / 2, weak: true)
-      + design-header-separator-between-connections
-      + h(design-header-horizontal-space-between-connections / 2, weak: true)
-  )
-  let starting-index = 0
-  while (starting-index < connections-list.len()) {
-    let left-sum-right-margin
-    if type(page.margin) == "dictionary" {
-      left-sum-right-margin = page.margin.left + page.margin.right
-    } else {
-      left-sum-right-margin = page.margin * 4
-    }
-
-    let ending-index = starting-index + 1
-    while (
-      measure(connections-list.slice(starting-index, ending-index).join(separator)).width
-        < page.width - left-sum-right-margin
-    ) {
-      ending-index = ending-index + 1
-      if ending-index > connections-list.len() {
-        break
-      }
-    }
-    if ending-index > connections-list.len() {
-      ending-index = connections-list.len()
-    }
-    list-of-connections.push(connections-list.slice(starting-index, ending-index).join(separator))
-    starting-index = ending-index
-  }
-  align(list-of-connections.join(linebreak()), design-header-alignment)
-  v(design-header-vertical-space-between-connections-and-first-section - design-section-titles-vertical-space-above)
-}
-
-#let three-col-entry(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  middle-content: "",
-  right-content: "",
-  alignments: (left, auto, right),
-) = (
-  if design-section-titles-type == "moderncv" [
-    #three-col(
-      left-column-width: right-column-width,
-      middle-column-width: left-column-width,
-      right-column-width: 1fr,
-      left-content: right-content,
-      middle-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      right-content: middle-content,
-      alignments: (design-text-date-and-location-column-alignment, left, auto),
-    )
-  ] else [
-    #block(
-      [
-        #three-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          middle-content: middle-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
-)
-
-#let two-col-entry(
-  left-column-width: 1fr,
-  right-column-width: design-entries-date-and-location-width,
-  left-content: "",
-  right-content: "",
-  alignments: (auto, design-text-date-and-location-column-alignment),
-  column-gutter: design-entries-horizontal-space-between-columns,
-) = (
-  if design-section-titles-type == "moderncv" [
-    #two-col(
-      left-column-width: right-column-width,
-      right-column-width: left-column-width,
-      left-content: right-content,
-      right-content: [
-        #block(
-          [
-            #left-content
-          ],
-          inset: (
-            left: design-entries-left-and-right-margin,
-            right: design-entries-left-and-right-margin,
-          ),
-          breakable: design-entries-allow-page-break-in-entries,
-          width: 100%,
-        )
-      ],
-      alignments: (design-text-date-and-location-column-alignment, auto),
-    )
-  ] else [
-    #block(
-      [
-        #two-col(
-          left-column-width: left-column-width,
-          right-column-width: right-column-width,
-          left-content: left-content,
-          right-content: right-content,
-          alignments: alignments,
-        )
-      ],
-      inset: (
-        left: design-entries-left-and-right-margin,
-        right: design-entries-left-and-right-margin,
-      ),
-      breakable: design-entries-allow-page-break-in-entries,
-      width: 100%,
-    )
-  ]
-)
-
-#let one-col-entry(content: "") = [
-  #let left-space = design-entries-left-and-right-margin
-  #if design-section-titles-type == "moderncv" [
-    #(left-space = left-space + design-entries-date-and-location-width + design-entries-horizontal-space-between-columns)
-  ]
-  #block(
-    [#set par(spacing: design-text-leading); #content],
-    breakable: design-entries-allow-page-break-in-entries,
-    inset: (
-      left: left-space,
-      right: design-entries-left-and-right-margin,
-    ),
-    width: 100%,
-  )
-]
 
 = Ark Malhotra
 
-// Print connections:
-#let connections-list = (
-  [#fa-icon("location-dot", size: 0.9em) #h(0.05cm)New Delhi, India],
-  [#box(original-link("mailto:ark.malhotra.ug24@nsut.ac.in")[#fa-icon("envelope", size: 0.9em) #h(0.05cm)ark.malhotra.ug24\@nsut.ac.in])],
-  [#box(original-link("tel:+91-83688-13202")[#fa-icon("phone", size: 0.9em) #h(0.05cm)083688 13202])],
-  [#box(original-link("https://sqrtnegativone.github.io/")[#fa-icon("link", size: 0.9em) #h(0.05cm)sqrtnegativone.github.io])],
-  [#box(original-link("https://linkedin.com/in/ark-malhotra")[#fa-icon("linkedin", size: 0.9em) #h(0.05cm)ark-malhotra])],
-  [#box(original-link("https://github.com/SqrtNegativOne")[#fa-icon("github", size: 0.9em) #h(0.05cm)SqrtNegativOne])],
+#connections(
+  [#connection-with-icon("location-dot")[New Delhi, India]],
+  [#link("mailto:ark.malhotra.ug24@nsut.ac.in", icon: false, if-underline: false, if-color: false)[#connection-with-icon("envelope")[ark.malhotra.ug24\@nsut.ac.in]]],
+  [#link("tel:+91-83688-13202", icon: false, if-underline: false, if-color: false)[#connection-with-icon("phone")[083688 13202]]],
+  [#link("https://sqrt.fyi/", icon: false, if-underline: false, if-color: false)[#connection-with-icon("link")[sqrt.fyi]]],
+  [#link("https://linkedin.com/in/ark-malhotra", icon: false, if-underline: false, if-color: false)[#connection-with-icon("linkedin")[ark-malhotra]]],
+  [#link("https://github.com/SqrtNegativOne", icon: false, if-underline: false, if-color: false)[#connection-with-icon("github")[SqrtNegativOne]]],
 )
-#connections(connections-list)
-
 
 
 == Education
 
-
-// YES DATE, YES DEGREE
-#three-col-entry(
-  left-column-width: 1.4cm,
-  left-content: [#strong[B.Tech]],
-  middle-content: [
-    #strong[Netaji Subash University of Technology], CSE
-  ],
-  right-content: [
-    Aug 2024 – June 2028
-  ],
-)
-#block(
+#education-entry(
   [
-    #set par(spacing: 0pt)
-    #v(design-highlights-top-margin);#highlights([CGPA: 8.3 \(1+2 semesters\)],)
+    #strong[Netaji Subash University of Technology], CSE
+
+    - CGPA: 8.09 (top 16.5\% of the class)
+
   ],
-  inset: (
-    left: design-entry-types-education-entry-degree-column-width + design-entries-horizontal-space-between-columns + design-entries-left-and-right-margin,
-    right: design-entries-left-and-right-margin,
-  ),
+  [
+    New Delhi, India
+
+    Aug 2024 – June 2028
+
+  ],
+  degree-column: [
+    #strong[B.Tech]
+  ],
+  main-column-second-row: [
+  ],
 )
 
+#education-entry(
+  [
+    #strong[Amity International School, Saket], Physics, Chemistry, Mathematics, Computer Science, English
 
+  ],
+  [
+    New Delhi, India
+
+  ],
+  degree-column: [
+    #strong[High School Diploma]
+  ],
+  main-column-second-row: [
+    - 93\% in CBSE Class 12 Board Exams
+
+  ],
+)
+
+#education-entry(
+  [
+    #strong[Amity International School, Saket], Science, Social Studies, Mathematics, Artificial Intelligence, English
+
+  ],
+  [
+    New Delhi, India
+
+  ],
+  degree-column: [
+    #strong[Middle School Diploma]
+  ],
+  main-column-second-row: [
+    - 94.8\% in CBSE Class 10 Board Exams
+
+  ],
+)
 
 == Experience
 
+#regular-entry(
+  [
+    #strong[IIT Madras - Computational Multiphysics Research Group], Research Intern
 
-#two-col-entry(
-  left-content: [
-    #strong[ML Department Mentor], Google Developer Student Club NSUT 
+    #summary[PyAMorph: High-Fidelity Implicit Geometry Modelling and Morphometric Analysis on Adaptive Meshes]
+
+    - Co-developed PyAMorph, an open-source #strong[high-performance computational physics library] for implicit geometry modelling using Signed Distance Functions and levelsets, supporting 2D\/3D CSG composition, TPMS metamaterial lattices, STL mesh import, and unsupervised image segmentation (image-to-geometry) with morphometric analysis
+
+    - Integrated with AMReX, a #strong[massively parallel] C++ framework used in petascale supercomputing applications, enabling scalable SDF field evaluation on adaptive multi-level grids across distributed MPI ranks
+
   ],
-  right-content: [
-    Nov 2024 – present
+  [
+    Chennai, India (Remote)
+
+    Jan 2026 – June 2026
+
+    
+
+    6 months
+
+  ],
+  main-column-second-row: [
+    - Accelerated the computational pipeline with GPU backends via #strong[CuPy] and NVIDIA Warp
+
   ],
 )
-#one-col-entry(
-  content: [
-    #v(design-highlights-top-margin);#highlights([Contributed to society projects such as #link("https://github.com/SqrtNegativOne/makemore")[#strong[makemore]] \(character level text generator using #strong[PyTorch]\), #link("https://github.com/SqrtNegativOne/AI-factcheck")[AI factchecking], and the code for the #link("https://unstop.com/hackathons/zero-day-apocalypse-shunya-netaji-subhas-university-of-technology-nsut-delhi-1549448")[Zero Day Apocalypse] competition under the society's flagship event.],[Managed recruitment for 600+ applicants in the ML department, selecting less than 20 after #link("https://github.com/SqrtNegativOne/competition-dataset-generation")[coding a dataset] for the #link("https://www.kaggle.com/competitions/recruitment-task-for-gdsc-ml/overview")[Kaggle competition] witnessing participation from 200+ teams from 4 countries, and conducting interviews.],[Ranked #link("https://www.kaggle.com/sqrtnegativ1/competitions")[#strong[top 17\%]] in an international ML Kaggle competition with a team of three, using libraries such as scikit-learn, pandas, numpy, matplotlib, and seaborn for EDA and baseline models.],)
-  ],
-)
-
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #strong[ML Engineer], Team Debugging Society 
-  ],
-  right-content: [
-    Oct 2024 – present
-  ],
-)
-#one-col-entry(
-  content: [
-    #v(design-highlights-top-margin);#highlights([Organised and helped judge an #link("https://unstop.com/hackathons/datasphere-data-analytics-challenge-spacecon-2025-netaji-subhas-university-of-technology-nsut-delhi-1382127")[inter-college data science ML competition] with 50+ participants.],)
-  ],
-)
-
-
 
 == Projects
 
+#regular-entry(
+  [
+    #strong[#link("https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf")[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation]]
 
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/SqrtNegativOne/resume/blob/main/resources/SIH.pdf")[#strong[Backend for FloatChat: Conversational Interface for Oceanographic Data Visualisation]] 
   ],
-  right-content: [
+  [
     Sept 2025 – Oct 2025
-  ],
-)
-#one-col-entry(
-  content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [SIH 2025 Project])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.],[Selected as one of the top 90 teams from over 200 teams in the college.],[Used #strong[FastAPI] to build a #strong[REST API] backend for modularity and compatibility with various frontends.],[Exposed an #strong[MCP] interface to allow AI agents to connect with ARGO Oceanographic #strong[API endpoints].],[Used #strong[PydanticAI] and #strong[LangChain] to implement efficient #strong[RAG] pipeline for context retrieval and response generation.],[Used #strong[Docker] for containerization and easy deployment.],)
   ],
-)
+  main-column-second-row: [
+    #summary[SIH 2025 Project]
 
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/SqrtNegativOne/AI-factcheck")[#strong[Modular AI Factchecking Pipeline]] 
-  ],
-  right-content: [
-    June 2025 – July 2025
-  ],
-)
-#one-col-entry(
-  content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for an AI factchecking app.])], column-gutter: 0cm)
+    - Brainstormed with a 6-member team under a strict time limit to deliver a functional prototype for SIH 2025.
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Implements a modular architecture for integration of web-scraping, NLP-based semantic search, and either LLM-based or NLI-based claim verification.],[Used local LLMs through #strong[Ollama] for cost-efficiency.],[Used #strong[LangChain] for #strong[RAG] to achieve better accuracy and context-awareness.],)
+    - Selected as one of the top 90 teams from over 200 teams in the college.
+
+    - Used #strong[FastAPI] to build a #strong[REST API] backend for modularity and compatibility with various frontends.
+
+    - Exposed an #strong[MCP] interface to allow AI agents to connect with ARGO Oceanographic #strong[API endpoints].
+
+    - Used #strong[PydanticAI] and #strong[LangChain] to implement efficient #strong[RAG] pipeline for context retrieval and response generation.
+
+    - Used #strong[Docker] for containerization and easy deployment.
+
   ],
 )
 
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/SqrtNegativOne/sqrtnegativone.github.io")[#strong[Personal Website]] 
+#regular-entry(
+  [
+    #strong[#link("https://sqrt.fyi")[Personal Website]]
+
   ],
-  right-content: [
+  [
     Oct 2024 – July 2025
+
+  ],
+  main-column-second-row: [
+    #summary[Portfolio website and blog]
+
+    - Built using #strong[React] with the Eleventy framework for blogging.
+
+    - Implements responsive-design, a markdown engine, and an RSS feed.
+
   ],
 )
-#one-col-entry(
-  content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Portfolio website and blog])], column-gutter: 0cm)
 
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Built using #strong[HTML], #strong[CSS], and #strong[Typescript] with the Eleventy framework for blogging.],[Implements responsive-design, a markdown engine, and an RSS feed.],)
-  ],
-)
+#regular-entry(
+  [
+    #strong[#link("https://github.com/SqrtNegativOne/hand-cricket-MAB")[Hand Cricket Multi-Agent Bandit model]]
 
-#v(design-entries-vertical-space-between-entries)
-#two-col-entry(
-  left-content: [
-    #link("https://github.com/SqrtNegativOne/hand-cricket-MAB")[#strong[Hand Cricket Multi-Agent Bandit model]] 
   ],
-  right-content: [
+  [
     June 2025 – June 2025
+
+  ],
+  main-column-second-row: [
+    #summary[Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.]
+
+    - Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.
+
+    - Multi-armed-bandit using Experts-As-Arms model composed of #strong[PyTorch neural networks], n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.
+
   ],
 )
-#one-col-entry(
-  content: [
-    #two-col(left-column-width: design-highlights-summary-left-margin, right-column-width: 1fr, left-content: [], right-content: [#v(design-highlights-top-margin);#align(left, [Python backend for a Multi-armed-bandit using Experts-As-Arms to beat you at Hand cricket.])], column-gutter: 0cm)
-
-#v(-design-text-leading)  #v(design-highlights-top-margin);#highlights([Statically typed game-theoretic agent to win at Hand cricket by analyzing patterns in players' moves.],[Multi-armed-bandit using Experts-As-Arms model composed of #strong[PyTorch neural networks], n-Gram expert-models, and other heuristics weaved through the Hedge algorithm.],)
-  ],
-)
-
-
 
 == Skills
 
+#strong[Languages:] C++, C, C\#, Javascript, Typescript, Python
 
-#one-col-entry(
-  content: [#strong[Languages:] C++, C, C\#, Javascript, Typescript, Python]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Technologies:] HTML, CSS, Javascript, Typescript, Python, Tailwind, Svelte, Git, Docker, FastAPI, REST API, Django, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn]
-)
-#v(design-entries-vertical-space-between-entries)
-#one-col-entry(
-  content: [#strong[Core Concepts:] Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming]
-)
+#strong[Technologies:] HTML, CSS, Javascript, Typescript, Python, Git, Docker, FastAPI, REST API, LangChain, PydanticAI, Numpy, Pandas, Scikit-learn, PyTorch, Matplotlib, Seaborn
 
-
+#strong[Core Concepts:] Machine Learning, Artificial Intelligence, Backend, MCP, RAG, Object Oriented Programming
